@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  background-color: #f8f8f8;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+.navbar_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_block {
+  display: flex;
+  list-style-type: none;
+}
+.navbar_block-list {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 30px;
+  cursor: pointer;
+}
+.navbar_block-list:nth-child(1) {
+  margin-left: 0;
+}
+.navbar_block-listA {
+  text-decoration: none;
+  margin-right: 5px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  color: #333333;
+}
+.navbar_block-listImg {
+  margin-right: 5px;
+}
+
+/* Второстепенные классы */
+.text_red {
+  color: #e11e26;
+}
+.border_red {
+  border-bottom: 1px solid #e11e26;
+}
+
+/* hover - active */
+.active:hover {
+  display: block;
+  border-bottom: 1px solid #e11e26;
+  color: #e11e26;
+}
+.navbar_block-listA:hover {
+  color: #e11e26;
+}
+.burger_menu {
+  display: none;
+  width: 25px;
+}
+.burger_menu-img {
+  display: inline-block;
+  margin-left: 20px;
+}
+.burger_menu-block {
+  position: relative;
+  display: none;
+}
+.cart_length {
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #e11e26;
+  color: #fff;
+  padding: 1px 3px;
+  border-radius: 50px;
+}
+
+@media (max-width: 1130px) {
+  .navbar_block {
+    display: none;
+  }
+  .burger_menu {
+    display: block;
+  }
+  .burger_menu-block {
+    display: block;
+  }
+}
+
+/* burger */
+.navbar_burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  padding: 30px;
+}
+.navbar_burger-block {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar_burger-list {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.list_actived:hover {
+  border-bottom: 1px solid #e11e26;
+  color: #e11e26;
+}
+.navbar_burger-listA {
+  font-size: 16px;
+  text-decoration: none;
+}
+.burger_block {
+  margin-top: 30px;
+}

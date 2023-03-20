@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url(./styles/Navbar.css);
+@import url(./styles/Header.css);
+@import url(./styles/ProductCart.css);
+@import url(./styles/Orders.css);
+@import url(./styles/Address.css);
+@import url(./styles/Footer.css);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 100%;
+  width: 85%;
+  margin: 0 auto;
+  font-family: "Inter";
+}
+.bread_crumps {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #333333;
+  opacity: 0.5;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Absolute form */
+.main {
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fixed {
+  position: fixed;
+  top: 320px;
+  right: 76px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.absoluted {
+  position: absolute;
+  top: 1080px;
+  right: 0;
+}
+.form_absolute {
+  width: 418px;
+  height: 392px;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+}
+.form_absolute-block {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.form_absolute-line {
+  height: 1px;
+  opacity: 0.2;
+  background-color: black;
+  width: 100%;
+  margin: 30px 0 30px;
+}
+.form_absolute-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.form_absolute-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+.form_absolute-textbold {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+.form_absolute-textRed {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  color: #ea5a5a;
 }
 
-.App-link {
-  color: #61dafb;
+.form_absolute-btn {
+  background-color: #ea5a5a;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 23px 110px;
+  border: none;
+  margin: 30px auto 20px;
+  cursor: pointer;
+}
+.form_absolute-btn:hover {
+  background-color: #eb7373;
+}
+.form_absolute-main {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 130%;
+  text-align: center;
+  color: #333333;
+}
+.form_absolute-main a {
+  text-decoration: none;
+  color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1450px) {
+  .form_absolute {
+    position: static;
+    width: 840px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 140px;
   }
-  to {
-    transform: rotate(360deg);
+  .form_absolute-line {
+    margin: 30px 0 10px;
+  }
+}
+@media (max-width: 980px) {
+  .form_absolute {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 425px) {
+  .bread_crumps {
+    font-size: 12px;
+  }
+  .form_absolute-title {
+    font-size: 18px;
+  }
+  .form_absolute-btn {
+    padding: 23px 80px;
+  }
+  .form_absolute-textbold {
+    font-size: 16px;
+  }
+  .form_absolute-textRed {
+    font-size: 16px;
   }
 }
