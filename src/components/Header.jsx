@@ -55,7 +55,11 @@ const Header = () => {
           }}
           onClick={() => setSearchVis(true)}
         />
-        <div className="search_absolute" ref={modalRef}>
+
+        <div
+          className={searchVisible ? "search_absolute" : "null"}
+          ref={modalRef}
+        >
           {searchVisible
             ? filteredItems?.map((item) => (
                 <div className="search_absolute-block" key={item.item.id}>
@@ -71,6 +75,8 @@ const Header = () => {
                 </div>
               ))
             : null}
+        </div>
+        <div className={searchVis ? "search_absolute" : "null"} ref={modalRef}>
           {searchVis
             ? cart.products?.slice(0, 2).map((item) => (
                 <div className="search_absolute-block" key={item.item.id}>
